@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    getaway:
+      routes:
+        - id: student
+          uri: http://localhost:8083/
+          predicates:
+            - Path=/api/student/**
+        - id: proffesseur
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/api/proffesseur/**
+        - id: groupe
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/api/groupe/
+
+        - id: etablissment
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/api/etablissement/**
+  application:
+    name: geteway-service
+server:
+  port: 8888

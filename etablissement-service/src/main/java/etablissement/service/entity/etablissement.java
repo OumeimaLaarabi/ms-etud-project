@@ -1,4 +1,4 @@
-package establishment.service.entity;
+package etablissement.service.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +14,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+
 public class etablissement {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,3 +26,4 @@ public class etablissement {
     String Type ;
 
 }
+

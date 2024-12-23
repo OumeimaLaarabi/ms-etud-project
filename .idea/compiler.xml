@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,21 +10,31 @@
         <module name="service (1) (gateway)" />
         <module name="service (1) (discovery)" />
       </profile>
-      <profile name="Annotation profile for student" enabled="true">
+      <profile name="Annotation profile for etablissement-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="service (1) (establishmentt)" />
         <module name="service (1) (student)" />
         <module name="service (1) (groupe)" />
+        <module name="service (1) (etablissement)" />
+      </profile>
+      <profile name="Annotation profile for proffesseur" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
         <module name="service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="17" />
+      <module name="service (1) (establishmentt)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -32,6 +43,7 @@
       <module name="service" options="-parameters" />
       <module name="service (1) (discovery)" options="-parameters" />
       <module name="service (1) (establishmentt)" options="-parameters" />
+      <module name="service (1) (etablissement)" options="-parameters" />
       <module name="service (1) (gateway)" options="-parameters" />
       <module name="service (1) (groupe)" options="-parameters" />
       <module name="service (1) (student)" options="-parameters" />
