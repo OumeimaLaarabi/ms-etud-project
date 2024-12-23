@@ -2,16 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for proffesseur" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
-        <module name="service" />
-      </profile>
       <profile name="Annotation profile for groupe" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -27,8 +17,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service (1) (gateway)" />
+        <module name="service (1) (discovery)" />
       </profile>
-      <profile name="Annotation profile for service (1) (groupe)" enabled="true">
+      <profile name="Annotation profile for proffesseur" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -37,12 +28,18 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="service (1) (groupe)" />
+        <module name="service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="service (1) (discovery)" options="-parameters" />
       <module name="service (1) (establishmentt)" options="-parameters" />
       <module name="service (1) (gateway)" options="-parameters" />
       <module name="service (1) (groupe)" options="-parameters" />
