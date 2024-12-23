@@ -1,4 +1,4 @@
-package entity;
+package student.service.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,13 +14,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class proffesseur {
+public class student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nom;
     private String prenom;
-    private String email;
-    private String specialite;
+    private int  id_groupe;
 
 }
