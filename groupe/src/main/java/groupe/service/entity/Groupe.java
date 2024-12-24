@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class groupe {
+public class Groupe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

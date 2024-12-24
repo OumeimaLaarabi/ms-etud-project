@@ -15,7 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 
-public class etablissement {
+public class Etablissement {
 
 
     @Id
