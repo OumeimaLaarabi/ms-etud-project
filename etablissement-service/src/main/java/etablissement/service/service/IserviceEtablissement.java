@@ -4,7 +4,7 @@ import etablissement.service.entity.Etablissement;
 
 import java.util.List;
 
-public interface IserviceEtablssement {
+public interface IserviceEtablissement {
     Etablissement addEtablissment(Etablissement etablissement);
 
     List<Etablissement> getAllEtablissements();

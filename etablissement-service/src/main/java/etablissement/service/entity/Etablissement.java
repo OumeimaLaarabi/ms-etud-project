@@ -24,6 +24,8 @@ public class Etablissement {
     String nom ;
     String adresse;
     String Type ;
+private int proffesseurId;
+private  int studentId;
 
 }
 

@@ -9,13 +9,13 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class EtablissementService implements IserviceEtablssement {
+public class EtablissementService implements IserviceEtablissement {
 
-    private final EtablissementRepository etablissementRepository; // Injection de l'instance
+    private  EtablissementRepository etablissementRepository; // Injection de l'instance
 
     @Override
     public Etablissement addEtablissment(Etablissement etablissement) {
-        return etablissementRepository.save(etablissement); // Appel sur l'instance injectée
+        return etablissementRepository.save(etablissement);
     }
 
     @Override
