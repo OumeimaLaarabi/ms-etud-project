@@ -48,7 +48,7 @@ public class EtablissmentRestController {
             String proffesseurIdsString = professorIds.stream()
                     .map(String::valueOf)
                     .collect(Collectors.joining(","));
-System.out.println(proffesseurIdsString);
+            System.out.println(proffesseurIdsString);
             List<Proffesseur> professeurs = proffesseurClient.getProffesseursByIds(proffesseurIdsString);
             if (professeurs.isEmpty()) {
                 return new ResponseEntity<>("Professors not found", HttpStatus.BAD_REQUEST);
@@ -73,7 +73,9 @@ System.out.println(proffesseurIdsString);
         List<Etablissement> etablissements = iserviceEtablissement.getAllEtablissements();
 
         for (Etablissement etablissement : etablissements) {
-            // Fetch associated professors
+            studentClient.getStudentById(etablissement.getStudentId())
+                    .ifPresent(etablissement::setStudent);
+
             List<EtablissementProffesseur> etablissementProfesseurs = etablissementProffesseurRepository.findByEtablissementId(etablissement.getId());
             List<Integer> professorIds = etablissementProfesseurs.stream()
                     .map(EtablissementProffesseur::getProffesseurId)
@@ -97,6 +99,9 @@ System.out.println(proffesseurIdsString);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
+        studentClient.getStudentById(etablissement.getStudentId())
+                .ifPresent(etablissement::setStudent);
+
         // Fetch associated professors
         List<EtablissementProffesseur> etablissementProfesseurs = etablissementProffesseurRepository.findByEtablissementId(etablissement.getId());
         List<Integer> proffesseursIds = etablissementProfesseurs.stream()
@@ -110,7 +115,7 @@ System.out.println(proffesseurIdsString);
 
 // Now call the Feign client with the comma-separated string
         List<Proffesseur> professeurs = proffesseurClient.getProffesseursByIds(proffesseursIdsString);
-
+        etablissement.setProffesseurs(professeurs);
         return new ResponseEntity<>(etablissement, HttpStatus.OK);
     }
 }

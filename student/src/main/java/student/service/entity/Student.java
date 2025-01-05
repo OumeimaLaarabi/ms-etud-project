@@ -14,16 +14,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 public class Student {
-
-
-
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int id;
-        private String nom;
-        private String prenom;
-        private int  id_groupe;
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String nom;
+    private String prenom;
 
 }

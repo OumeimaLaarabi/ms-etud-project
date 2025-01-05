@@ -27,10 +27,10 @@ public class ProffesseurController {
     }
 
 
-@GetMapping("all")
+    @GetMapping("all")
     public List<Proffesseur> allProffesseurs() {
         return iServiceProffesseur.getAllProffesseurs();
-}
+    }
     // Récupérer un professeur par son ID
     @GetMapping("{id}")
     public Optional<Proffesseur> getById(@PathVariable int id){
@@ -56,5 +56,4 @@ public class ProffesseurController {
     }
 
 }
-
 
