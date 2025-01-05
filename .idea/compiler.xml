@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service (1) (student)" />
-        <module name="service (1) (config)" />
         <module name="service (1) (gateway)" />
         <module name="service (1) (discovery)" />
         <module name="service" />
+        <module name="service (1) (config)" />
         <module name="service (1) (etablissement)" />
+        <module name="security-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +28,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
       <module name="manager" options="-parameters" />
+      <module name="security-server" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="service (1) (config)" options="-parameters" />
       <module name="service (1) (discovery)" options="-parameters" />
