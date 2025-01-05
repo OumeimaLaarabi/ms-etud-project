@@ -1,13 +1,13 @@
 package etablissement.service.entity;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import etablissement.service.model.Proffesseur;
+import etablissement.service.model.Student;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,8 +24,13 @@ public class Etablissement {
     String nom ;
     String adresse;
     String Type ;
-private int proffesseurId;
-private  int studentId;
+    @Transient
+    private Student student;
+
+    private  int studentId;
+    @Transient
+    private List<Proffesseur> proffesseurs;
+
 
 }
 
